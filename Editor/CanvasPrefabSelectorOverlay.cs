@@ -22,7 +22,12 @@ namespace Adruian.Pages.Editor
                 button.clicked += Click;
                 button.text = canvas.name;
                 root.Add(button);
-                void Click() => AssetDatabase.OpenAsset(AssetDatabase.LoadAssetAtPath<GameObject>(PrefabUtility.GetPrefabAssetPathOfNearestInstanceRoot(canvas.gameObject)));
+                void Click()
+                {
+                    Canvas view = Object.FindObjectsOfType<Canvas>(true).Where(x => x.name == button.text).FirstOrDefault();
+                    if (view == null) return;
+                    AssetDatabase.OpenAsset(AssetDatabase.LoadAssetAtPath<GameObject>(PrefabUtility.GetPrefabAssetPathOfNearestInstanceRoot(view.gameObject)));
+                }
             }
 
             return root;
