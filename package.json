@@ -1,0 +1,12 @@
+{
+    "name": "com.adruian.canvas-prefab-selector",
+    "version": "0.0.1",
+    "displayName": "Canvas Prefab Selector",
+    "description": "Overlay to select different prefab canvas on the scene.",
+    "unity": "2021.3",
+    "author": {
+        "name": "Adrián Botana Pérez",
+        "email": "adruian@gmail.com",
+        "url": "https://www.linkedin.com/in/abotanaperez/"
+    }
+}
